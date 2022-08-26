@@ -1,12 +1,16 @@
 import './style.css';
+import Logo from './kklogo.png'
 
-function component() {
+function navbar() {
     const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = 'hello';
+    element.id = 'navbar';
+
+    const logo = new Image();
+    logo.src = Logo;
+    logo.id = 'logo';
+    element.appendChild(logo);
   
     return element;
-  }
+}
   
-  document.body.appendChild(component());
+document.body.appendChild(navbar());
