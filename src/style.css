@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('./Caveat-VariableFont_wght.ttf');
+    font-weight: bold;
+}
+
 body {
     background-image: url('./bubbleBG.jpg');
     background-size: cover;
@@ -14,8 +20,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10vw;
 }
 
 #logo {
     height: 80%;
+}
+
+.menu-item {
+    color: rgb(202, 202, 202);
+    font-size: 36px;
+    font-family: 'Caveat';
 }
