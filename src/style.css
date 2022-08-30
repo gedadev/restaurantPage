@@ -9,6 +9,11 @@ body {
     background-size: cover;
 }
 
+#content {
+    display: flex;
+    justify-content: center;
+}
+
 #navbar {
     height: 140px;
     width: 100vw;
@@ -32,4 +37,27 @@ body {
     font-size: 36px;
     font-family: 'Caveat';
     cursor: pointer;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-top: 250px;
+    width: 65%;
+    gap: 24px;
+}
+
+#picture {
+    height: 50vh;
+}
+
+#greeting {
+    font-family: serif;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(241, 248, 255);
+    font-weight: bolder;
+    text-shadow: 2px 2px rgb(63, 63, 63);
 }
