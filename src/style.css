@@ -31,4 +31,5 @@ body {
     color: rgb(202, 202, 202);
     font-size: 36px;
     font-family: 'Caveat';
+    cursor: pointer;
 }

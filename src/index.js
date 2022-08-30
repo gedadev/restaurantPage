@@ -1,5 +1,6 @@
 import './style.css';
 import Logo from './kklogo.png'
+import helloWorld from './home';
 
 function navbar() {
     const container = document.createElement('div');
@@ -16,9 +17,12 @@ function navbar() {
         menuDiv.className = 'menu-item';
         menuDiv.innerHTML = element;
         container.appendChild(menuDiv);
+        menuDiv.addEventListener('click', (e) => {
+            helloWorld();
+        });
     });
   
     return container;
 }
-  
-document.body.appendChild(navbar());
+
+document.querySelector('#content').appendChild(navbar());
