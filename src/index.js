@@ -1,6 +1,10 @@
 import './style.css';
 import Logo from './kklogo.png'
 import content from './home';
+import galley from './menu';
+const main = document.querySelector('#content');
+const body = document.createElement('div');
+body.id = 'body';
 
 function navbar() {
     const container = document.createElement('div');
@@ -18,12 +22,16 @@ function navbar() {
         menuDiv.innerHTML = element;
         container.appendChild(menuDiv);
         menuDiv.addEventListener('click', (e) => {
-            document.querySelector('#content').appendChild(content());
+            while (body.firstChild) {
+                body.removeChild(body.lastChild);
+            }
+            body.appendChild(galley());
         });
     });
     
     return container;
 }
 
-document.querySelector('#content').appendChild(navbar());
-document.querySelector('#content').appendChild(content());
+main.appendChild(navbar());
+main.appendChild(body);
+body.appendChild(content());
