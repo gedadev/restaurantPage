@@ -2,6 +2,7 @@ import './style.css';
 import Logo from './kklogo.png'
 import content from './home';
 import galley from './menu';
+import info from './info';
 const main = document.querySelector('#content');
 const body = document.createElement('div');
 body.id = 'body';
@@ -22,10 +23,24 @@ function navbar() {
         menuDiv.innerHTML = element;
         container.appendChild(menuDiv);
         menuDiv.addEventListener('click', (e) => {
-            while (body.firstChild) {
-                body.removeChild(body.lastChild);
+            if (element.toLowerCase() === 'home') {
+                while (body.firstChild) {
+                    body.removeChild(body.lastChild);
+                }
+                body.appendChild(content());
             }
-            body.appendChild(galley());
+            if (element.toLowerCase() === 'galley grub') {
+                while (body.firstChild) {
+                    body.removeChild(body.lastChild);
+                }
+                body.appendChild(galley());
+            }
+            if (element.toLowerCase() === 'info') {
+                while (body.firstChild) {
+                    body.removeChild(body.lastChild);
+                }
+                body.appendChild(info());
+            }
         });
     });
     
